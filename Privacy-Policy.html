@@ -4,21 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy – Faith Awakening Ministry</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header><h1>Privacy Policy</h1></header>
- <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="privacy-policy.html">Privacy</a>
-  <a href="terms-of-use.html">Terms</a>
-  <a href="disclaimer.html">Disclaimer</a>
-</nav>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy</a>
+    <a href="terms-of-use.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </nav>
+
   <main>
     <h2>1. Information We Collect</h2>
     <p>We collect information you voluntarily provide (name, email, phone) when you donate, subscribe, or contact us.</p>
@@ -45,6 +50,16 @@
     <h2>7. Changes to This Policy</h2>
     <p>Updated: 2 June 2025. We may modify this policy; changes will be posted here.</p>
   </main>
+
   <footer>© 2025 Faith Awakening Ministry</footer>
+
+  <!-- Cookie banner – must be just before </body> -->
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>
+  window.cookieconsent.initialise({
+    palette:{popup:{background:"#2c3e50"},button:{background:"#e67e22"}},
+    content:{message:"This website uses cookies to remember your preferences and analyze traffic.", dismiss:"Got it!", link:"Learn more", href:"privacy-policy.html"}
+  });
+  </script>
 </body>
 </html>
