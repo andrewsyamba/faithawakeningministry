@@ -8,13 +8,14 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI',Arial,sans-serif;line-height:1.6;color:var(--dark);background:var(--light)}
 header{
-  background:url('https://raw.githubusercontent.com/andrewsyamba/faithawakeningministry/main/banner.jpg') center/cover no-repeat;
-  height:40vh;
+  background:url('https://raw.githubusercontent.com/andrewsyamba/faithawakeningministry/main/banner.jpg') center/contain no-repeat;
+  height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
   color:#fff;
-  text-shadow:1px 1px 3px rgba(0,0,0,.5)
+  text-shadow:1px 1px 3px rgba(0,0,0,.5);
+  background-color:var(--primary);
 }
 header h1{font-size:3rem}
 nav{position:sticky;top:0;background:var(--primary);padding:1rem;z-index:1000}
