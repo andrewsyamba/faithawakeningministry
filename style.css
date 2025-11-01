@@ -13,7 +13,7 @@ body{
   background:var(--light)
 }
 header{
- background:url('https://raw.githubusercontent.com/andrewsyamba/faithawakeningministry/main/banner.jpg') center/cover no-repeat;
+  background:url('https://raw.githubusercontent.com/andrewsyamba/faithawakeningministry/main/banner.jpg') center/cover no-repeat;
   height:40vh;
   display:flex;
   align-items:center;
@@ -28,3 +28,11 @@ nav a{color:#fff;margin-right:1.2rem;text-decoration:none;font-weight:bold}
 nav a:hover{color:var(--accent)}
 main{padding:2rem 1rem;max-width:900px;margin:auto}
 footer{text-align:center;padding:1.5rem;font-size:.9rem;background:var(--primary);color:#fff;margin-top:2rem}
+/* --- ANIMATIONS --- */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px)}
+  to{opacity:1; transform:translateY(0)}
+}
+main, footer{animation:fadeIn .8s ease-out both}
+nav a{transition:transform .2s ease}
+nav a:hover{transform:translateY(-2px)}
