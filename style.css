@@ -6,7 +6,12 @@
   --dark:#111;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Segoe UI',Arial,sans-serif;line-height:1.6;color:var(--dark);background:var(--light)}
+body{
+  font-family:'Poppins',Arial,sans-serif;
+  line-height:1.6;
+  color:var(--dark);
+  background:var(--light)
+}
 header{
   background:url('https://raw.githubusercontent.com/andrewsyamba/faithawakeningministry/main/banner.jpg') center/cover no-repeat;
   height:40vh;
@@ -16,7 +21,7 @@ header{
   color:#fff;
   text-shadow:1px 1px 3px rgba(0,0,0,.5)
 }
-header h1{font-size:3rem}
+header h1{font-size:3rem;font-family:'Merriweather',serif}
 nav{position:sticky;top:0;background:var(--primary);padding:1rem;z-index:1000}
 nav a{color:#fff;margin-right:1.2rem;text-decoration:none;font-weight:bold}
 nav a:hover{color:var(--accent)}
