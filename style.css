@@ -28,6 +28,7 @@ nav a{color:#fff;margin-right:1.2rem;text-decoration:none;font-weight:bold}
 nav a:hover{color:var(--accent)}
 main{padding:2rem 1rem;max-width:900px;margin:auto}
 footer{text-align:center;padding:1.5rem;font-size:.9rem;background:var(--primary);color:#fff;margin-top:2rem}
+
 /* --- ANIMATIONS --- */
 @keyframes fadeIn{
   from{opacity:0; transform:translateY(20px)}
@@ -36,3 +37,29 @@ footer{text-align:center;padding:1.5rem;font-size:.9rem;background:var(--primary
 main, footer{animation:fadeIn .8s ease-out both}
 nav a{transition:transform .2s ease}
 nav a:hover{transform:translateY(-2px)}
+
+/* ===== DARK MODE ===== */
+:root{
+  --bg-light:#ecf0f1;
+  --bg-dark:#121212;
+  --text-light:#111;
+  --text-dark:#f1f1f1;
+  --primary-dark:#1a252f;
+}
+
+body.dark{
+  background:var(--bg-dark);
+  color:var(--text-dark);
+}
+body.dark header{background:var(--primary-dark)}
+body.dark nav{background:#0d1117}
+body.dark .donate-btn{background:#e67e22}
+
+#theme-toggle{
+  margin-left:auto;
+  background:none;
+  border:none;
+  font-size:1.5rem;
+  cursor:pointer;
+  line-height:1;
+}
