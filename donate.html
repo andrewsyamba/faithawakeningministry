@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate – Faith Awakening Ministry</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* pretty donate buttons */
+    .donate-grid{display:grid;gap:1.5rem;margin-top:2rem}
+    .donate-btn{background:var(--accent);color:#fff;padding:1rem 2rem;border:none;border-radius:4px;font-size:1.1rem;cursor:pointer;transition:background .3s}
+    .donate-btn:hover{background:#d35400}
+  </style>
+</head>
+<body>
+  <header><h1>Donate</h1></header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="live-stream.html">Live Stream</a>
+    <a href="events.html">Events</a>
+    <a href="donate.html">Donate</a>
+    <a href="privacy-policy.html">Privacy</a>
+    <a href="terms-of-use.html">Terms</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </nav>
+
+  <main>
+    <h2>Support the Ministry</h2>
+    <p>Every gift helps us share the Gospel and serve our community. All donations are final and non-refundable.</p>
+
+    <div class="donate-grid">
+      <!-- PayPal button – uses your real button ID -->
+      <form action="https://www.paypal.com/donate" method="post" target="_top">
+        <input type="hidden" name="hosted_button_id" value="YSDUY5NKKSJYN">
+        <button class="donate-btn" type="submit">Donate with PayPal</button>
+      </form>
+
+      <!-- Stripe placeholder (optional) -->
+      <button class="donate-btn" onclick="alert('Stripe coming soon!')">Donate with Card/Stripe</button>
+    </div>
+
+    <h3>Other ways to give</h3>
+    <ul>
+      <li>Mobile Money: +232 76 993 122 (Andrew Syamba)</li>
+      <li>Bank transfer: email <a href="mailto:faithawakeningministries@gmail.com">faithawakeningministries@gmail.com</a> for details.</li>
+    </ul>
+  </main>
+
+  <footer>© 2025 Faith Awakening Ministry</footer>
+
+  <!-- Cookie banner -->
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>
+  window.cookieconsent.initialise({
+    palette:{popup:{background:"#2c3e50"},button:{background:"#e67e22"}},
+    content:{message:"This website uses cookies to remember your preferences and analyze traffic.", dismiss:"Got it!", link:"Learn more", href:"privacy-policy.html"}
+  });
+  </script>
+</body>
+</html>
