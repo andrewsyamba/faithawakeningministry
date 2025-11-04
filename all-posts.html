@@ -28,7 +28,7 @@
     .read-more{font-weight:600;color:var(--accent);}
     .accent-btn{background:#e67e22;color:#fff;border:none;padding:.75rem 1.25rem;border-radius:4px;cursor:pointer;font-weight:600;margin-bottom:1.5rem;}
     .accent-btn:hover{background:#cf711f;}
-    #postCreator{border:1px solid #ccc;border-radius:8px;padding:1.5rem;margin:2rem 0;background:#f9fafb;}
+    #postCreator{border:1px solid #ccc;border-radius:8px;padding:1.5rem;margin:2rem 0;background:#f9fafb;display:none;}
     #postCreator label{display:block;margin:.75rem 0;font-weight:500;}
     #postCreator input, #postCreator textarea{width:100%;padding:.5rem;margin-top:.25rem;font-family:inherit;}
   </style>
@@ -43,7 +43,7 @@
     <!-- =====  One-Click Blog Creator  ===== -->
     <button id="newPostBtn" class="accent-btn">＋ New Post (like Blogger)</button>
 
-    <div id="postCreator" style="display:none;">
+    <div id="postCreator">
       <h3>Create New Post</h3>
       <label>Title:
         <input type="text" id="postTitle" placeholder="e.g. 3 Ways to Pray Without Ceasing">
@@ -65,8 +65,6 @@
     <p>Browse our full archive of short, practical devotionals.</p>
 
     <div class="post-grid">
-      <!-- Paste new cards here (copy any block below, change 3 lines) -->
-
       <!-- 1  The Power of Hope -->
       <article class="post-card">
         <h3><a href="the-power-of-hope.html">The Power of Hope</a></h3>
@@ -132,7 +130,7 @@
   <script>window.cookieconsent.initialise({palette:{popup:{background:"#2c3e50"},button:{background:"#e67e22"}},content:{message:"This website uses cookies to remember your preferences and analyze traffic.",dismiss:"Got it!",link:"Learn more",href:"privacy-policy.html"}});</script>
   <script>const t=document.getElementById('theme-toggle'),h=document.documentElement,c=localStorage.getItem('theme')||'light';h.classList.toggle('dark',c==='dark');t.textContent=c==='dark'?'☀️':'🌙';t.addEventListener('click',()=>{h.classList.toggle('dark');const d=h.classList.contains('dark');localStorage.setItem('theme',d?'dark':'light');t.textContent=d?'☀️':'🌙';});</script>
 
-  <!-- =====  Blog-Creator Scripts  ===== -->
+  <!-- =====  Blog-Creator Script  ===== -->
   <script>
     function openCreator(){document.getElementById('postCreator').style.display='block';}
     function closeCreator(){document.getElementById('postCreator').style.display='none';}
