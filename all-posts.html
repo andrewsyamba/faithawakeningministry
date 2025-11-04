@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Posts – Faith Awakening Ministry</title>
+  <meta name="description" content="Complete archive of encouraging articles on faith, hope, prayer and victorious Christian living.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="google-site-verification" content="X-_fWbXOD4f1g9NPo3tbx9alhf7cSIMvL0AqY_rzxCw" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-37N1EWRXQT"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-37N1EWRXQT');</script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root{--accent:#e67e22;--light:#ffffff;--dark:#1f2937;}
+    .post-grid{display:grid;gap:1.5rem;margin:2rem 0;}
+    .post-card{background:var(--light);border:1px solid #e5e7eb;border-radius:8px;padding:1.5rem;transition:transform .2s;}
+    .dark .post-card{background:#1f2937;border-color:#374151;}
+    .post-card:hover{transform:translateY(-3px);}
+    .post-card h3{margin:0 0 .5rem;font-size:1.25rem;}
+    .post-card h3 a{text-decoration:none;color:var(--dark);}
+    .post-card h3 a:hover{color:var(--accent);}
+    .meta{font-size:.875rem;color:#6b7280;margin:0 0 1rem;}
+    .read-more{font-weight:600;color:var(--accent);}
+    .accent-btn{background:#e67e22;color:#fff;border:none;padding:.75rem 1.25rem;border-radius:4px;cursor:pointer;font-weight:600;margin-bottom:1.5rem;}
+    .accent-btn:hover{background:#cf711f;}
+    #postCreator{border:1px solid #ccc;border-radius:8px;padding:1.5rem;margin:2rem 0;background:#f9fafb;}
+    #postCreator label{display:block;margin:.75rem 0;font-weight:500;}
+    #postCreator input, #postCreator textarea{width:100%;padding:.5rem;margin-top:.25rem;font-family:inherit;}
+  </style>
+</head>
+<body>
+  <header><h1>All Posts</h1><button id="theme-toggle">🌙</button></header>
+  <nav>
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="live-stream.html">Live Stream</a><a href="events.html">Events</a><a href="donate.html">Donate</a><a href="privacy-policy.html">Privacy</a><a href="terms-of-use.html">Terms</a><a href="disclaimer.html">Disclaimer</a><a href="all-posts.html" aria-current="page">Blog</a>
+  </nav>
+
+  <main>
+    <!-- =====  One-Click Blog Creator  ===== -->
+    <button id="newPostBtn" class="accent-btn">＋ New Post (like Blogger)</button>
+
+    <div id="postCreator" style="display:none;">
+      <h3>Create New Post</h3>
+      <label>Title:
+        <input type="text" id="postTitle" placeholder="e.g. 3 Ways to Pray Without Ceasing">
+      </label>
+      <label>Date:
+        <input type="date" id="postDate" value="2025-06-25">
+      </label>
+      <label>Tags (comma separated):
+        <input type="text" id="postTags" placeholder="Faith, Prayer, Growth">
+      </label>
+      <label>Content (Markdown or plain HTML):
+        <textarea id="postContent" rows="12" placeholder="Write your article here…"></textarea>
+      </label>
+      <button onclick="generatePostFile()" class="accent-btn">Generate .html file</button>
+      <button onclick="closeCreator()" style="margin-left:1rem;">Cancel</button>
+    </div>
+    <!-- =====  End Creator  ===== -->
+
+    <p>Browse our full archive of short, practical devotionals.</p>
+
+    <div class="post-grid">
+      <!-- Paste new cards here (copy any block below, change 3 lines) -->
+
+      <!-- 1  The Power of Hope -->
+      <article class="post-card">
+        <h3><a href="the-power-of-hope.html">The Power of Hope</a></h3>
+        <p class="meta">Andrew · 8 Jun 2025 · Faith, Hope</p>
+        <p>Hope is not wishful thinking—it is confident expectation rooted in God’s character…</p>
+        <a class="read-more" href="the-power-of-hope.html">Read more →</a>
+      </article>
+
+      <!-- 2  Next-Level Faith -->
+      <article class="post-card">
+        <h3><a href="next-level-faith.html">Next-Level Faith</a></h3>
+        <p class="meta">Andrew · 9 Jun 2025 · Faith, Growth</p>
+        <p>God rarely gives us the full map—only the next step…</p>
+        <a class="read-more" href="next-level-faith.html">Read more →</a>
+      </article>
+
+      <!-- 3  When Faith Feels Weak -->
+      <article class="post-card">
+        <h3><a href="when-faith-feels-weak.html">When Faith Feels Weak</a></h3>
+        <p class="meta">Andrew · 10 Jun 2025 · Faith, Encouragement</p>
+        <p>Practical steps to strengthen your faith when doubts creep in…</p>
+        <a class="read-more" href="when-faith-feels-weak.html">Read more →</a>
+      </article>
+
+      <!-- 4  Healing Through Forgiveness -->
+      <article class="post-card">
+        <h3><a href="healing-through-forgiveness.html">Healing Through Forgiveness</a></h3>
+        <p class="meta">Andrew · 22 Oct 2025 · Faith, Healing, Love</p>
+        <p>Forgiveness unlocks the door to emotional and spiritual healing…</p>
+        <a class="read-more" href="healing-through-forgiveness.html">Read more →</a>
+      </article>
+
+      <!-- 5  Build Daily Habits That Last -->
+      <article class="post-card">
+        <h3><a href="build-daily-habits-that-last.html">Build Daily Habits That Last</a></h3>
+        <p class="meta">Andrew · 22 Oct 2025 · Lifestyle, Motivation, Productivity</p>
+        <p>Small, consistent actions create lifelong transformation…</p>
+        <a class="read-more" href="build-daily-habits-that-last.html">Read more →</a>
+      </article>
+
+      <!-- 6  When Life Feels Overwhelming -->
+      <article class="post-card">
+        <h3><a href="when-life-feels-overwhelming.html">When Life Feels Overwhelming</a></h3>
+        <p class="meta">Andrew · 22 Oct 2025 · Encouragement, Faith, Peace</p>
+        <p>Three biblical anchors that keep you steady in the storm…</p>
+        <a class="read-more" href="when-life-feels-overwhelming.html">Read more →</a>
+      </article>
+
+      <!-- ======  TEMPLATE FOR NEXT POST  ======
+      <article class="post-card">
+        <h3><a href="NEW-FILE.html">NEW TITLE</a></h3>
+        <p class="meta">Andrew · DATE · TAGS</p>
+        <p>Short excerpt…</p>
+        <a class="read-more" href="NEW-FILE.html">Read more →</a>
+      </article>
+      -->
+    </div>
+  </main>
+
+  <footer>© 2025 Faith Awakening Ministry</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>window.cookieconsent.initialise({palette:{popup:{background:"#2c3e50"},button:{background:"#e67e22"}},content:{message:"This website uses cookies to remember your preferences and analyze traffic.",dismiss:"Got it!",link:"Learn more",href:"privacy-policy.html"}});</script>
+  <script>const t=document.getElementById('theme-toggle'),h=document.documentElement,c=localStorage.getItem('theme')||'light';h.classList.toggle('dark',c==='dark');t.textContent=c==='dark'?'☀️':'🌙';t.addEventListener('click',()=>{h.classList.toggle('dark');const d=h.classList.contains('dark');localStorage.setItem('theme',d?'dark':'light');t.textContent=d?'☀️':'🌙';});</script>
+
+  <!-- =====  Blog-Creator Scripts  ===== -->
+  <script>
+    function openCreator(){document.getElementById('postCreator').style.display='block';}
+    function closeCreator(){document.getElementById('postCreator').style.display='none';}
+    document.getElementById('newPostBtn').onclick=openCreator;
+
+    function generatePostFile(){
+      const title=document.getElementById('postTitle').value.trim();
+      const date=document.getElementById('postDate').value;
+      const tags=document.getElementById('postTags').value.split(',').map(t=>t.trim()).join(', ');
+      const rawContent=document.getElementById('postContent').value.trim();
+      if(!title||!rawContent){alert('Please fill title and content');return;}
+
+      let htmlContent=rawContent
+        .replace(/^### (.*$)/gim,'<h3>$1</h3>')
+        .replace(/^## (.*$)/gim,'<h2>$1</h2>')
+        .replace(/^# (.*$)/gim,'<h1>$1</h1>')
+        .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g,'<em>$1</em>')
+        .replace(/\n\n/g,'</p><p>')
+        .replace(/\n/g,'<br>');
+      htmlContent='<p>'+htmlContent+'</p>';
+
+      const fileName=title.toLowerCase().replace(/[^a-z0-9]+/g,'-')+'.html';
+      const template=`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title} – Faith Awakening Ministry</title>
+  <meta name="description" content="${title} – encouraging devotional from Faith Awakening Ministry, Sierra Leone.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="google-site-verification" content="X-_fWbXOD4f1g9NPo3tbx9alhf7cSIMvL0AqY_rzxCw" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-37N1EWRXQT"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-37N1EWRXQT');</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>${title}</h1><button id="theme-toggle">🌙</button></header>
+  <nav>
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="live-stream.html">Live Stream</a><a href="events.html">Events</a><a href="donate.html">Donate</a><a href="privacy-policy.html">Privacy</a><a href="terms-of-use.html">Terms</a><a href="disclaimer.html">Disclaimer</a><a href="all-posts.html">Blog</a>
+  </nav>
+  <main>
+    <p><em>Posted: ${date}</em></p>
+    ${htmlContent}
+    <h2>A Prayer for Today</h2>
+    <p><em>“Lord, thank You for speaking to me through this devotional.  Help me live it out today.  Amen.”</em></p>
+  </main>
+  <footer>© 2025 Faith Awakening Ministry</footer>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>window.cookieconsent.initialise({palette:{popup:{background:"#2c3e50"},button:{background:"#e67e22"}},content:{message:"This website uses cookies to remember your preferences and analyze traffic.",dismiss:"Got it!",link:"Learn more",href:"privacy-policy.html"}});</script>
+  <script>const t=document.getElementById('theme-toggle'),h=document.documentElement,c=localStorage.getItem('theme')||'light';h.classList.toggle('dark',c==='dark');t.textContent=c==='dark'?'☀️':'🌙';t.addEventListener('click',()=>{h.classList.toggle('dark');const d=h.classList.contains('dark');localStorage.setItem('theme',d?'dark':'light');t.textContent=d?'☀️':'🌙';});</script>
+</body>
+</html>`;
+
+      const blob=new Blob([template],{type:'text/html'});
+      const url=URL.createObjectURL(blob);
+      const a=document.createElement('a');
+      a.href=url;
+      a.download=fileName;
+      a.click();
+      URL.revokeObjectURL(url);
+      closeCreator();
+    }
+  </script>
+</body>
+</html>
