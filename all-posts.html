@@ -28,7 +28,7 @@
     .read-more{font-weight:600;color:var(--accent);}
     .accent-btn{background:#e67e22;color:#fff;border:none;padding:.75rem 1.25rem;border-radius:4px;cursor:pointer;font-weight:600;margin-bottom:1.5rem;}
     .accent-btn:hover{background:#cf711f;}
-    #postCreator{border:1px solid #ccc;border-radius:8px;padding:1.5rem;margin:2rem 0;background:#f9fafb;display:none;}
+    #postCreator{border:1px solid #ccc;border-radius:8px;padding:1.5rem;margin:2rem 0;background:#f9fafb;}
     #postCreator label{display:block;margin:.75rem 0;font-weight:500;}
     #postCreator input, #postCreator textarea{width:100%;padding:.5rem;margin-top:.25rem;font-family:inherit;}
   </style>
@@ -40,10 +40,11 @@
   </nav>
 
   <main>
-    <!-- =====  One-Click Blog Creator  ===== -->
-    <button id="newPostBtn" class="accent-btn">＋ New Post (like Blogger)</button>
+    <!-- =====  Creator Link (always visible)  ===== -->
+    <a href="#create" class="accent-btn" onclick="document.getElementById('postCreator').style.display='block'; return false;">＋ New Post (like Blogger)</a>
 
-    <div id="postCreator">
+    <!-- =====  Creator Form (hidden until link clicked)  ===== -->
+    <div id="postCreator" style="display:none;">
       <h3>Create New Post</h3>
       <label>Title:
         <input type="text" id="postTitle" placeholder="e.g. 3 Ways to Pray Without Ceasing">
@@ -58,9 +59,8 @@
         <textarea id="postContent" rows="12" placeholder="Write your article here…"></textarea>
       </label>
       <button onclick="generatePostFile()" class="accent-btn">Generate .html file</button>
-      <button onclick="closeCreator()" style="margin-left:1rem;">Cancel</button>
+      <button onclick="document.getElementById('postCreator').style.display='none';" style="margin-left:1rem;">Cancel</button>
     </div>
-    <!-- =====  End Creator  ===== -->
 
     <p>Browse our full archive of short, practical devotionals.</p>
 
@@ -132,10 +132,6 @@
 
   <!-- =====  Blog-Creator Script  ===== -->
   <script>
-    function openCreator(){document.getElementById('postCreator').style.display='block';}
-    function closeCreator(){document.getElementById('postCreator').style.display='none';}
-    document.getElementById('newPostBtn').onclick=openCreator;
-
     function generatePostFile(){
       const title=document.getElementById('postTitle').value.trim();
       const date=document.getElementById('postDate').value;
@@ -197,7 +193,6 @@
       a.download=fileName;
       a.click();
       URL.revokeObjectURL(url);
-      closeCreator();
     }
   </script>
 </body>
