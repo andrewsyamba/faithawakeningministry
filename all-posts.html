@@ -26,16 +26,11 @@
     .post-card h3 a:hover{color:var(--accent);}
     .meta{font-size:.875rem;color:#6b7280;margin:0 0 1rem;}
     .read-more{font-weight:600;color:var(--accent);}
-    .edit-link{font-size:.75rem;color:var(--accent);margin-left:.5rem;}
     .accent-btn{background:#e67e22;color:#fff;border:none;padding:.75rem 1.25rem;border-radius:4px;cursor:pointer;font-weight:600;margin-bottom:1.5rem;}
     .accent-btn:hover{background:#cf711f;}
     #postCreator{border:1px solid #ccc;border-radius:8px;padding:1.5rem;margin:2rem 0;background:#f9fafb;display:none;}
     #postCreator label{display:block;margin:.75rem 0;font-weight:500;}
     #postCreator input, #postCreator textarea{width:100%;padding:.5rem;margin-top:.25rem;font-family:inherit;}
-    .collapsible{cursor:pointer;color:var(--accent);}
-    .collapsible:after{content:" ▼";}
-    .active:after{content:" ▲";}
-    .content{display:none;padding:.5rem 0;}
   </style>
 </head>
 <body>
@@ -45,12 +40,12 @@
   </nav>
 
   <main>
-    <!-- =====  NEW POST (like Blogger)  ===== -->
+    <!-- =====  NEW POST BUTTON  ===== -->
     <a href="#create" class="accent-btn" onclick="document.getElementById('postCreator').style.display='block'; return false;">＋ New Post (like Blogger)</a>
 
-    <!-- =====  EDITOR (hidden until opened)  ===== -->
+    <!-- =====  EDITOR  ===== -->
     <div id="postCreator" style="display:none;">
-      <h3>Create / Edit Post</h3>
+      <h3>Create New Post</h3>
 
       <label>Title:
         <input type="text" id="postTitle" placeholder="e.g. How to Trust God When You Can't See the Outcome">
@@ -64,28 +59,80 @@
         <input type="text" id="postTags" placeholder="trusting God, Faith in Hard Times, uncertainty">
       </label>
 
-      <!--  Extra Blogger-style settings  -->
-      <div class="collapsible" onclick="this.classList.toggle('active');this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block';">Post settings ▼</div>
-      <div class="content">
-        <label>Labels (comma separated):
-          <input type="text" id="postLabels" placeholder="Faith, Spiritual Growth">
-        </label>
-        <label>Links (comma separated):
-          <input type="text" id="postLinks" placeholder="https://example.com">
-        </label>
-        <label>Location:
-          <input type="text" id="postLocation" placeholder="Sierra Leone">
-        </label>
-        <label>Search Description (155 chars):
-          <input type="text" id="postSearchDesc" placeholder="Learn 5 biblical ways to trust God when you cannot see the outcome.">
-        </label>
-        <label>Custom Robot Tags (comma):
-          <input type="text" id="postRobots" placeholder="index,follow">
-        </label>
-      </div>
-
       <label>Content (Markdown or plain HTML):
-        <textarea id="postContent" rows="15" placeholder="Write your article here…"></textarea>
+        <textarea id="postContent" rows="15" placeholder="Write your article here…">You're standing at the edge of the unknown, staring into a foggy future. The medical diagnosis just came back uncertain. The job opportunity fell through. The relationship hangs in limbo. You've prayed, you've sought God, but the path ahead remains shrouded in mystery. In this painful space between "I believe" and "I see," how do you keep trusting when every natural evidence says to panic? If you're struggling to trust God with an outcome you can't control, you're in good company. Even biblical heroes faced this exact crisis—and their stories reveal powerful secrets to trusting God in the dark.
+
+The Crisis of the Unseen: Why This Hurts So Much
+There's a reason uncertainty feels so unsettling. We're wired for clarity, for plans, for knowing what's next. When that's stripped away, we feel vulnerable and afraid. But this is exactly where faith moves from theory to reality. 2 Corinthians 5:7 reminds us, "For we live by faith, not by sight."
+
+If you're in this difficult place right now, I want to encourage you with this truth: Your inability to see the outcome doesn't reflect God's inability to work it out. He sees what you cannot, and He's already in your future working things out for your good (Romans 8:28).
+
+1. Shift Your Focus from the "What If" to the "Who Is"
+The Problem: We become consumed with worst-case scenarios, playing out every possible negative outcome in our minds until fear paralyzes us.
+
+The Solution: Replace your "what if" worries with "who God is" declarations. Every time you catch yourself imagining disasters, counter it with a truth about God's character.
+
+Practical Steps:
+- When you think, "What if this never gets better?" declare, "God is my healer and redeemer."
+- When you fear "What if I end up alone?" remember "God promises never to leave me."
+- When you worry, "What if I can't handle this?" affirm, "God's strength is made perfect in my weakness."
+
+This isn't positive thinking—it's spiritual warfare. You're taking thoughts captive and making them obedient to Christ (2 Corinthians 10:5).
+
+2. Anchor Yourself in God's Track Record
+The Problem: Our fears in the present often make us forget God's faithfulness in the past.
+
+The Solution: Create a "faithfulness journal" where you document how God has come through for you before. When the Israelites faced the Red Sea with the Egyptians behind them, they panicked—until they remembered how God had delivered them from slavery with mighty wonders.
+
+Practical Steps:
+- List 3-5 times God has provided for you unexpectedly
+- Remember how He guided you through past uncertainties
+- Note answered prayers, even the ones that looked different from what you expected
+- Read biblical stories of God's faithfulness like Joseph, David, and Ruth
+
+As you practice the spiritual discipline of gratitude, you'll build a reservoir of evidence that God can be trusted even when you can't see Him working.
+
+3. Embrace the "Meanwhile" Ministry
+The Problem: We want God to resolve our situation immediately, and the waiting feels like wasted time.
+
+The Solution: Understand that God is often doing His deepest work in us during the "meanwhile"—the space between our prayer and His answer.
+
+Consider Joseph's story: Betrayed, enslaved, imprisoned—for years, he couldn't see how his dreams would ever come true. But God was working "meanwhile" to position him to save nations. Genesis 50:20 reveals the outcome: "You intended to harm me, but God intended it for good to accomplish what is now being done, the saving of many lives."
+
+Practical Steps:
+- Ask "God, what do You want to teach me in this waiting season?"
+- Look for ways to serve others even while you're hurting
+- Trust that character development is as important as circumstance change
+
+4. Speak Truth to Your Soul Like David Did
+The Problem: Our emotions often scream louder than our faith.
+
+The Solution: Learn from the Psalms how to honestly express feelings while still choosing trust. David repeatedly practiced this pattern: honest lament followed by truth declaration.
+
+Read Psalm 13: "How long, Lord? Will you forget me forever?..." (that's the honest pain). But it ends with "But I trust in your unfailing love..." (that's the deliberate trust).
+
+Practical Steps:
+- Write your own "Psalm" expressing your raw feelings to God
+- Then, list biblical promises that counter those feelings
+- Speak those promises out loud when fear attacks
+- Use worship music to shift your atmosphere from fear to faith
+
+5. Practice "Next-Step" Obedience
+The Problem: We want God to show us the entire map when He typically only reveals the next step.
+
+The Solution: Focus on obeying what you DO know rather than worrying about what you DON'T know. God's guidance often comes in increments.
+
+Proverbs 3:5-6 gives the pattern: "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight." Notice the sequence: Trust → Don't rely on your limited understanding → Submit what you know → THEN He directs.
+
+Practical Steps:
+- Ask, "What is the next right thing God is asking me to do today?"
+- Focus on being faithful in small, current responsibilities
+- Take one practical step of obedience, even if it's small
+- Trust that as you move in obedience, more direction will come
+
+A Prayer for Trust When You're in the Dark
+Lord Jesus, I confess that I'm scared. I don't see a way forward, and the uncertainty is overwhelming. Forgive me for relying on my own understanding. Help me to trust You even when I can't trace Your hand. Bring to my mind Your past faithfulness when my present fears scream loud. Give me the courage to take the next step of obedience, however small. I choose to believe that You are good, that You are in control, and that You are working all things together for my good—even when every circumstance suggests otherwise. Hold me close when my faith feels weak. In Your trustworthy name, Amen.
+</textarea>
       </label>
 
       <button onclick="publishPost()" class="accent-btn">Publish Post</button>
@@ -101,7 +148,7 @@
         <p class="meta">Andrew · 8 Jun 2025 · Faith, Hope</p>
         <p>Hope is not wishful thinking—it is confident expectation rooted in God’s character…</p>
         <a class="read-more" href="the-power-of-hope.html">Read more →</a>
-        <a class="edit-link" href="#" onclick="loadPost('the-power-of-hope.html'); return false;"> 
+      </article>
 
       <!-- 2  Next-Level Faith -->
       <article class="post-card">
@@ -109,7 +156,7 @@
         <p class="meta">Andrew · 9 Jun 2025 · Faith, Growth</p>
         <p>God rarely gives us the full map—only the next step…</p>
         <a class="read-more" href="next-level-faith.html">Read more →</a>
-        <a class="edit-link" href="#" onclick="loadPost('next-level-faith.html'); return false;"> 
+      </article>
 
       <!-- 3  When Faith Feels Weak -->
       <article class="post-card">
@@ -117,7 +164,7 @@
         <p class="meta">Andrew · 10 Jun 2025 · Faith, Encouragement</p>
         <p>Practical steps to strengthen your faith when doubts creep in…</p>
         <a class="read-more" href="when-faith-feels-weak.html">Read more →</a>
-        <a class="edit-link" href="#" onclick="loadPost('when-faith-feels-weak.html'); return false;"> 
+      </article>
 
       <!-- 4  Healing Through Forgiveness -->
       <article class="post-card">
@@ -125,101 +172,33 @@
         <p class="meta">Andrew · 22 Oct 2025 · Faith, Healing, Love</p>
         <p>Forgiveness unlocks the door to emotional and spiritual healing…</p>
         <a class="read-more" href="healing-through-forgiveness.html">Read more →</a>
-        <a class="edit-link" href="#" onclick="loadPost('healing-through-forgiveness.html'); return false;"> 
-          
+      </article>
+
       <!-- 5  Build Daily Habits That Last -->
       <article class="post-card">
         <h3><a href="build-daily-habits-that-last.html">Build Daily Habits That Last</a></h3>
         <p class="meta">Andrew · 22 Oct 2025 · Lifestyle, Motivation, Productivity</p>
         <p>Small, consistent actions create lifelong transformation…</p>
         <a class="read-more" href="build-daily-habits-that-last.html">Read more →</a>
-        <a class="edit-link" href="#" onclick="loadPost('build-daily-habits-that-last.html'); return false;"> 
-          
+      </article>
+
       <!-- 6  When Life Feels Overwhelming -->
       <article class="post-card">
         <h3><a href="when-life-feels-overwhelming.html">When Life Feels Overwhelming</a></h3>
         <p class="meta">Andrew · 22 Oct 2025 · Encouragement, Faith, Peace</p>
         <p>Three biblical anchors that keep you steady in the storm…</p>
         <a class="read-more" href="when-life-feels-overwhelming.html">Read more →</a>
-        <a class="edit-link" href="#" onclick="loadPost('when-life-feels-overwhelming.html'); return false;"> 
-          
+      </article>
+
       <!-- ======  TEMPLATE FOR NEXT POST  ======
       <article class="post-card">
         <h3><a href="NEW-FILE.html">NEW TITLE</a></h3>
         <p class="meta">Andrew · DATE · TAGS</p>
         <p>Short excerpt…</p>
         <a class="read-more" href="NEW-FILE.html">Read more →</a>
-        <a class="edit-link" href="#" onclick="loadPost('NEW-FILE.html'); return false;">Edit</a>
       </article>
       -->
     </div>
   </main>
 
-  <footer>© 2025 Faith Awakening Ministry</footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-  <script>window.cookieconsent.initialise({palette:{popup:{background:"#2c3e50"},button:{background:"#e67e22"}},content:{message:"This website uses cookies to remember your preferences and analyze traffic.",dismiss:"Got it!",link:"Learn more",href:"privacy-policy.html"}});</script>
-  <script>const t=document.getElementById('theme-toggle'),h=document.documentElement,c=localStorage.getItem('theme')||'light';h.classList.toggle('dark',c==='dark');t.textContent=c==='dark'?'☀️':'🌙';t.addEventListener('click',()=>{h.classList.toggle('dark');const d=h.classList.contains('dark');localStorage.setItem('theme',d?'dark':'light');t.textContent=d?'☀️':'🌙';});</script>
-
-  <!-- =====  PUBLISHER + EDITOR  ===== -->
-  <script>
-    /* ----------  PUBLISH NEW POST  ---------- */
-    function publishPost(){
-      const title=document.getElementById('postTitle').value.trim();
-      const date=document.getElementById('postDate').value;
-      const tags=document.getElementById('postTags').value.split(',').map(t=>t.trim()).join(', ');
-      const labels=document.getElementById('postLabels').value.trim();
-      const links=document.getElementById('postLinks').value.trim();
-      const location=document.getElementById('postLocation').value.trim();
-      const searchDesc=document.getElementById('postSearchDesc').value.trim();
-      const robots=document.getElementById('postRobots').value.trim()||'index,follow';
-      const rawContent=document.getElementById('postContent').value.trim();
-      if(!title||!rawContent){alert('Please fill title and content');return;}
-
-      // Markdown → HTML
-      let htmlContent=rawContent
-        .replace(/^### (.*$)/gim,'<h3>$1</h3>')
-        .replace(/^## (.*$)/gim,'<h2>$1</h2>')
-        .replace(/^# (.*$)/gim,'<h1>$1</h1>')
-        .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
-        .replace(/\*(.+?)\*/g,'<em>$1</em>')
-        .replace(/\n\n/g,'</p><p>')
-        .replace(/\n/g,'<br>');
-      htmlContent='<p>'+htmlContent+'</p>';
-
-      const fileName=title.toLowerCase().replace(/[^a-z0-9]+/g,'-')+'.html';
-
-      const template=`<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${title} – Faith Awakening Ministry</title>
-  <meta name="description" content="${searchDesc||title+' – encouraging devotional from Faith Awakening Ministry, Sierra Leone.'}">
-  <meta name="keywords" content="${tags}">
-  <meta name="robots" content="${robots}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="google-site-verification" content="X-_fWbXOD4f1g9NPo3tbx9alhf7cSIMvL0AqY_rzxCw" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-37N1EWRXQT"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-37N1EWRXQT');</script>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header><h1>${title}</h1><button id="theme-toggle">🌙</button></header>
-  <nav>
-    <a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="live-stream.html">Live Stream</a><a href="events.html">Events</a><a href="donate.html">Donate</a><a href="privacy-policy.html">Privacy</a><a href="terms-of-use.html">Terms</a><a href="disclaimer.html">Disclaimer</a><a href="all-posts.html">Blog</a>
-  </nav>
-  <main>
-    <p><em>Posted: ${date}${location?' · '+location:''}</em></p>
-    ${htmlContent}
-    ${links?'<h2>Helpful Links</h2><ul>'+links.split(',').map(l=>`<li><a href="${l.trim()}" target="_blank" rel="noopener">${l.trim()}</a></li>`).join('')+'</ul>':''}
-    ${labels?'<h2>Labels</h2><p>'+labels.split(',').map(l=>`<span style="background:#e67e22;color:#fff;padding:2px 6px;border-radius:3px;margin-right:4px;">${l.trim()}</span>`).join('')+'</p>':''}
-    <h2>A Prayer for Today</h2>
-    <p><em>“Lord, thank You for speaking to me through this devotional.  Help me live it out today.  Amen.”</em></p>
-  </main>
   <footer>© 2025 Faith Awakening Ministry</footer>
