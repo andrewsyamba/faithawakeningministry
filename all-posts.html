@@ -40,25 +40,25 @@
   </nav>
 
   <main>
-    <!-- =====  Creator Link (always visible)  ===== -->
+    <!-- =====  Blogger-style “New Post” Button  ===== -->
     <a href="#create" class="accent-btn" onclick="document.getElementById('postCreator').style.display='block'; return false;">＋ New Post (like Blogger)</a>
 
-    <!-- =====  Creator Form (hidden until link clicked)  ===== -->
+    <!-- =====  Editor (hidden until button clicked)  ===== -->
     <div id="postCreator" style="display:none;">
       <h3>Create New Post</h3>
       <label>Title:
-        <input type="text" id="postTitle" placeholder="e.g. 3 Ways to Pray Without Ceasing">
+        <input type="text" id="postTitle" placeholder="e.g. How to Trust God When You Can't See the Outcome">
       </label>
       <label>Date:
-        <input type="date" id="postDate" value="2025-06-25">
+        <input type="date" id="postDate" value="2025-11-05">
       </label>
       <label>Tags (comma separated):
-        <input type="text" id="postTags" placeholder="Faith, Prayer, Growth">
+        <input type="text" id="postTags" placeholder="trusting God, Faith in Hard Times, uncertainty">
       </label>
       <label>Content (Markdown or plain HTML):
-        <textarea id="postContent" rows="12" placeholder="Write your article here…"></textarea>
+        <textarea id="postContent" rows="15" placeholder="Write your article here…"></textarea>
       </label>
-      <button onclick="generatePostFile()" class="accent-btn">Generate .html file</button>
+      <button onclick="publishPost()" class="accent-btn">Publish Post</button>
       <button onclick="document.getElementById('postCreator').style.display='none';" style="margin-left:1rem;">Cancel</button>
     </div>
 
