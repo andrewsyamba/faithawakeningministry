@@ -47,6 +47,127 @@
 
     <h2>6.  A Prayer You Can Pray Right Now</h2>
     <p><em>“Lord, I feel weak, but Your Word says I’m strong in You.  Strengthen my heart today.  Amen.”</em></p>
+
+    <!-- =====  COMMENTS & COMMUNITY (Firebase Backend)  ===== -->
+<hr>
+<h2>Join the Conversation</h2>
+
+<!--  LOGIN / SIGN-UP  -->
+<div id="loginBox" style="border:1px solid #ccc;border-radius:8px;padding:1rem;margin-bottom:1rem;">
+  <h3>Log in to comment</h3>
+  <label>Email:
+    <input type="email" id="loginEmail" placeholder="you@example.com">
+  </label>
+  <label>Password:
+    <input type="password" id="loginPwd" placeholder="min 6 characters">
+  </label>
+  <button onclick="login()" class="accent-btn">Log In</button>
+  <button onclick="signup()" class="accent-btn" style="margin-left:0.5rem;">Sign Up</button>
+</div>
+
+<!--  COMMENT FORM  -->
+<div id="commentForm" style="display:none;margin-bottom:1rem;">
+  <p>Logged in as <strong id="userName"></strong> · <a href="#" onclick="logout();return false;">Log out</a></p>
+  <textarea id="commentText" rows="4" style="width:100%;" placeholder="Share your thoughts…"></textarea>
+  <button onclick="postComment()" class="accent-btn">Post Comment</button>
+</div>
+
+<!--  COMMENTS LIST  -->
+<ul id="commentList" style="list-style:none;padding:0;"></ul>
+
+<!-- =====  FIREBASE BACKEND  ===== -->
+<script type="module">
+  // Import ONLY what we need (no npm, no build tools)
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+  import { getFirestore, collection, addDoc, query, where, orderBy, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+  // Your real Firebase keys (already copied)
+  const firebaseConfig = {
+    apiKey: "AIzaSyB0boKzRX2lRYKkcwwIpvHfw8OlOorMjMg",
+    authDomain: "fau-community-abfa3.firebaseapp.com",
+    projectId: "fau-community-abfa3",
+    storageBucket: "fau-community-abfa3.firebasestorage.app",
+    messagingSenderId: "628751046173",
+    appId: "1:628751046173:web:1135c6fb599c96d70518f4"
+  };
+
+  const app  = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db   = getFirestore(app);
+  const page = window.location.pathname.split('/').pop(); // post file name
+
+  /* ----------  AUTH  ---------- */
+  window.login = async function(){
+    const email = document.getElementById('loginEmail').value.trim();
+    const pwd   = document.getElementById('loginPwd').value;
+    if(!email||!pwd){alert('Enter email & password');return;}
+    try{
+      await signInWithEmailAndPassword(auth, email, pwd);
+      hideLogin(); loadComments();
+    }catch(e){alert('Login failed: '+e.message);}
+  };
+  window.signup = async function(){
+    const email = document.getElementById('loginEmail').value.trim();
+    const pwd   = document.getElementById('loginPwd').value;
+    if(!email||!pwd){alert('Enter email & password');return;}
+    try{
+      await createUserWithEmailAndPassword(auth, email, pwd);
+      hideLogin(); loadComments();
+    }catch(e){alert('Sign-up failed: '+e.message);}
+  };
+  window.logout = async function(){
+    await signOut(auth);
+    location.reload();
+  };
+
+  /* ----------  COMMENTS  ---------- */
+  window.postComment = async function(){
+    const text = document.getElementById('commentText').value.trim();
+    if(!text){alert('Write a comment');return;}
+    const user = auth.currentUser;
+    if(!user){alert('Please log in first');return;}
+    try{
+      await addDoc(collection(db, 'comments'), {
+        page: page,
+        user: user.email,
+        text: text,
+        date: serverTimestamp()
+      });
+      document.getElementById('commentText').value='';
+    }catch(e){alert('Error posting: '+e.message);}
+  };
+
+  function loadComments(){
+    const q = query(collection(db, 'comments'), where('page','==',page), orderBy('date','asc'));
+    onSnapshot(q, (snap)=>{
+      const list = document.getElementById('commentList');
+      list.innerHTML='';
+      if(snap.empty){list.innerHTML='<li style="color:#6b7280;">Be the first to comment!</li>';return;}
+      snap.forEach(doc=>{
+        const c = doc.data();
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${c.user}</strong> <span style="color:#6b7280;font-size:0.8em;">${c.date?.toDate().toLocaleString()}</span><br>${c.text}`;
+        list.appendChild(li);
+      });
+    });
+  }
+
+  /* ----------  ON LOAD  ---------- */
+  onAuthStateChanged(auth, user=>{
+    if(user){
+      document.getElementById('loginBox').style.display='none';
+      document.getElementById('commentForm').style.display='block';
+      document.getElementById('userName').textContent=user.email;
+      loadComments();
+    }else{
+      document.getElementById('loginBox').style.display='block';
+      document.getElementById('commentForm').style.display='none';
+      loadComments();
+    }
+  });
+</script>
+    
   </main>
 
   <footer>© 2025 Faith Awakening Ministry</footer>
